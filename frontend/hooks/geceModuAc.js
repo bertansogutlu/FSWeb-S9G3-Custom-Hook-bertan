@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+
 export const useMod = initialValue => {
     const [geceModu, setGeceModu] = useState(initialValue);
     const toggleMode = e => {
