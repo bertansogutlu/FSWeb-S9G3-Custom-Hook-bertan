@@ -1,6 +1,7 @@
 import { useState } from "react";
+import {useLocalStorage} from "./localStorageKullan";
 
-export const useMod = initialValue => {
+export const useGeceModuAc = initialValue => {
     const [value, setValue] = useState(initialValue);
     const toggle = e => {
         e.preventDefault();
