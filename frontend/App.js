@@ -7,7 +7,7 @@ import {useGeceModuAc} from "./hooks/geceModuAc";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [geceModu, toggleMode] = useGeceModuAc(false);
+  const [geceModu, toggleMode] = useGeceModuAc("mod", false);
 
   useEffect(() => {
     axios
