@@ -7,7 +7,7 @@ import {useMod} from "./hooks/geceModuAc";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [geceModu, setGeceModu, toggleMode] = useMod(false);
+  const [geceModu, toggleMode] = useMod(false);
 
   useEffect(() => {
     axios
@@ -19,7 +19,7 @@ const App = () => {
   }, []);
   return (
     <div className={geceModu ? "dark-mode App" : "App"}>
-      <Navbar geceModu={geceModu} setGeceModu={setGeceModu} toggleMode={toggleMode}/>
+      <Navbar geceModu={geceModu} toggleMode={toggleMode}/>
       <Charts coinData={coinData} />
     </div>
   );
